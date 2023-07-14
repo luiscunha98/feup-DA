@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['separateedgesbydistrict_0',['separateEdgesByDistrict',['../class_algorithms.html#a34bedd5cd0132e7dae1d78384c7ee26e',1,'Algorithms']]],
+  ['separateedgesbymunicipality_1',['separateEdgesByMunicipality',['../class_algorithms.html#a94dfbff9f3d3a63fef47dfa3d3232bcf',1,'Algorithms']]],
+  ['setdist_2',['setDist',['../class_vertex.html#a6939bef79bfe5fe5bf77d9fd1bd70085',1,'Vertex']]],
+  ['setdistrict_3',['setDistrict',['../class_vertex.html#a449a75fa3f08e4f9fe352f90c9489060',1,'Vertex']]],
+  ['setflow_4',['setFlow',['../class_edge.html#a788cfe1f98772af4e7bbfe6310d0ccaa',1,'Edge']]],
+  ['setindegree_5',['setIndegree',['../class_vertex.html#aeb605d2ba9296a5e40496a9e37557d03',1,'Vertex']]],
+  ['setline_6',['setLine',['../class_vertex.html#a44f07b8450f871df1790cb0ddfaf0816',1,'Vertex']]],
+  ['setmunicipality_7',['setMunicipality',['../class_vertex.html#aa8b0864be09cc93528077fb529ebf579',1,'Vertex']]],
+  ['setname_8',['setName',['../class_vertex.html#a42d9dfc02d2f1a36320c6324b552420b',1,'Vertex']]],
+  ['setpath_9',['setPath',['../class_vertex.html#abe4bc30005eec65e775d0cd51f456460',1,'Vertex']]],
+  ['setprocesssing_10',['setProcesssing',['../class_vertex.html#a1c93b166281b30db2edef03791748ace',1,'Vertex']]],
+  ['setreverse_11',['setReverse',['../class_edge.html#a64881280015bd83702fe3b2c6234b7e5',1,'Edge']]],
+  ['setselected_12',['setSelected',['../class_edge.html#a8ab1cf2fe7fd16152d1dba3822853894',1,'Edge']]],
+  ['settownship_13',['setTownship',['../class_vertex.html#a1afb354d2743ae7b5fd0e4168092c652',1,'Vertex']]],
+  ['setvisited_14',['setVisited',['../class_vertex.html#a15eeabbbb6d517af746ae137c6d5b595',1,'Vertex']]],
+  ['setweight_15',['setWeight',['../class_edge.html#a7ba1bfa5c9c7972d2c31b2c3ba3d7c69',1,'Edge']]]
+];

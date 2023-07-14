@@ -1,0 +1,127 @@
+\doxysection{Algorithms Class Reference}
+\hypertarget{classAlgorithms}{}\label{classAlgorithms}\index{Algorithms@{Algorithms}}
+
+
+Contains static methods for various algorithms.  
+
+
+
+
+{\ttfamily \#include $<$algorithms.\+h$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classAlgorithms_a5d956e50a716b561d917eb825ca57357}{backtracking\+TG}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Performs the backtracking algorithm on a Traveling Salesman Problem (TSP) graph. \end{DoxyCompactList}\item 
+\Hypertarget{classAlgorithms_acae34835e5c7ad7b49658e5b81043600}\label{classAlgorithms_acae34835e5c7ad7b49658e5b81043600} 
+static void {\bfseries backtracking\+RWG} (std\+::string \&filename)
+\item 
+static void \mbox{\hyperlink{classAlgorithms_a5c14f494486705738784cba7e2c954ad}{triangularapproximation\+TG}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Performs the triangular approximation algorithm on a Traveling Salesman Problem (TSP) graph. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classAlgorithms_aecd5d844fea65310f80445d5970eb9e9}{nearest\+Neighbor\+TSP}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Performs the Nearest Neighbor heuristic on a Traveling Salesman Problem (TSP) is part of Other Heuristics.. \end{DoxyCompactList}\item 
+\Hypertarget{classAlgorithms_a46f4c2f9fcaeb1e3077f695c4d643c1a}\label{classAlgorithms_a46f4c2f9fcaeb1e3077f695c4d643c1a} 
+static void {\bfseries triangularapproximation\+RWG} (const std\+::string \&filename)
+\item 
+static void \mbox{\hyperlink{classAlgorithms_a7619ec132861edbf90bf276d9cb50b26}{two\+Opt\+TSP}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Performs the Two-\/\+Opt heuristic on a Traveling Salesman Problem (TSP) is part of Other Heuristics. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classAlgorithms_ae8d85db3e9d7948fe02979390f2e54b2}{christofides}} (std\+::string \&file)
+\begin{DoxyCompactList}\small\item\em Executes the Christofides algorithm on a graph read from a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains static methods for various algorithms. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classAlgorithms_a5d956e50a716b561d917eb825ca57357}\label{classAlgorithms_a5d956e50a716b561d917eb825ca57357} 
+\index{Algorithms@{Algorithms}!backtrackingTG@{backtrackingTG}}
+\index{backtrackingTG@{backtrackingTG}!Algorithms@{Algorithms}}
+\doxysubsubsection{\texorpdfstring{backtrackingTG()}{backtrackingTG()}}
+{\footnotesize\ttfamily static void Algorithms\+::backtracking\+TG (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Performs the backtracking algorithm on a Traveling Salesman Problem (TSP) graph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the file containing the graph data. Time Complexity is factorial , for toy graphs it works for the others the inc rease in time is too much (estimate\+:n=20 3 \texorpdfstring{$\ast$}{*} (20!/11!) = 3 \texorpdfstring{$\ast$}{*} (20 \texorpdfstring{$\ast$}{*} 19 \texorpdfstring{$\ast$}{*} 18 \texorpdfstring{$\ast$}{*} ... \texorpdfstring{$\ast$}{*} 2 \texorpdfstring{$\ast$}{*} 1) / (11 \texorpdfstring{$\ast$}{*} 10 \texorpdfstring{$\ast$}{*} 9 \texorpdfstring{$\ast$}{*} ... \texorpdfstring{$\ast$}{*} 2 \texorpdfstring{$\ast$}{*} 1) \texorpdfstring{$\sim$}{\string~} 12,988,800s) given that for n=11 rakes about 3 seconds \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classAlgorithms_ae8d85db3e9d7948fe02979390f2e54b2}\label{classAlgorithms_ae8d85db3e9d7948fe02979390f2e54b2} 
+\index{Algorithms@{Algorithms}!christofides@{christofides}}
+\index{christofides@{christofides}!Algorithms@{Algorithms}}
+\doxysubsubsection{\texorpdfstring{christofides()}{christofides()}}
+{\footnotesize\ttfamily static void Algorithms\+::christofides (\begin{DoxyParamCaption}\item[{std\+::string \&}]{file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Executes the Christofides algorithm on a graph read from a file. 
+
+This function implements the Christofides algorithm to find an approximate solution for the Traveling Salesman Problem (TSP). It reads a graph from a file and performs the following steps\+:
+\begin{DoxyEnumerate}
+\item Reads the graph from the file in either RWG or TG format.
+\item Finds the Minimum Spanning Tree (MST) of the graph.
+\item Computes a perfect matching on the MST to create a Eulerian graph.
+\item Iterates over each vertex to find the best path starting from the first vertex.
+\item Calculates the Euler tour of the best path.
+\item Converts the Euler tour to a Hamiltonian path by removing duplicate vertices.
+\item Prints the result of the algorithm and the final Hamiltonian path.
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The name of the file containing the graph data. A complexidade e dominada pela função de matching , O(n\texorpdfstring{$^\wedge$}{\string^}3) como não e minimal matching \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classAlgorithms_aecd5d844fea65310f80445d5970eb9e9}\label{classAlgorithms_aecd5d844fea65310f80445d5970eb9e9} 
+\index{Algorithms@{Algorithms}!nearestNeighborTSP@{nearestNeighborTSP}}
+\index{nearestNeighborTSP@{nearestNeighborTSP}!Algorithms@{Algorithms}}
+\doxysubsubsection{\texorpdfstring{nearestNeighborTSP()}{nearestNeighborTSP()}}
+{\footnotesize\ttfamily static void Algorithms\+::nearest\+Neighbor\+TSP (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Performs the Nearest Neighbor heuristic on a Traveling Salesman Problem (TSP) is part of Other Heuristics.. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the file containing the graph data. O(\+V\texorpdfstring{$^\wedge$}{\string^}2) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classAlgorithms_a5c14f494486705738784cba7e2c954ad}\label{classAlgorithms_a5c14f494486705738784cba7e2c954ad} 
+\index{Algorithms@{Algorithms}!triangularapproximationTG@{triangularapproximationTG}}
+\index{triangularapproximationTG@{triangularapproximationTG}!Algorithms@{Algorithms}}
+\doxysubsubsection{\texorpdfstring{triangularapproximationTG()}{triangularapproximationTG()}}
+{\footnotesize\ttfamily static void Algorithms\+::triangularapproximation\+TG (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Performs the triangular approximation algorithm on a Traveling Salesman Problem (TSP) graph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the file containing the graph data. Algoritmo dos slides, alternativa para 4.\+2, complexidade O(\+V\texorpdfstring{$^\wedge$}{\string^}2)\+: , 2 approximation \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classAlgorithms_a7619ec132861edbf90bf276d9cb50b26}\label{classAlgorithms_a7619ec132861edbf90bf276d9cb50b26} 
+\index{Algorithms@{Algorithms}!twoOptTSP@{twoOptTSP}}
+\index{twoOptTSP@{twoOptTSP}!Algorithms@{Algorithms}}
+\doxysubsubsection{\texorpdfstring{twoOptTSP()}{twoOptTSP()}}
+{\footnotesize\ttfamily static void Algorithms\+::two\+Opt\+TSP (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Performs the Two-\/\+Opt heuristic on a Traveling Salesman Problem (TSP) is part of Other Heuristics. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the file containing the graph data. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+algorithms.\+h\end{DoxyCompactItemize}

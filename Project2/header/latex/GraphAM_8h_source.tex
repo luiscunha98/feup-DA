@@ -1,0 +1,75 @@
+\doxysection{Graph\+AM.\+h}
+\hypertarget{GraphAM_8h_source}{}\label{GraphAM_8h_source}\mbox{\hyperlink{GraphAM_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ DA2\_GRAPHAM\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ DA2\_GRAPHAM\_H}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classGraphAM}{GraphAM}}\ \{}
+\DoxyCodeLine{00019\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{int}\ numNodes;\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//\ Number\ of\ Vertex}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{int}\ n;}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{comment}{//path}}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{int}\ **path\_vals;}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{comment}{//Shortest\ path\ length}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{int}\ pathLength\{\};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{comment}{//\ List\ of\ odd\ nodes}}
+\DoxyCodeLine{00031\ \ \ \ \ std::vector<int>odds;}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{comment}{//euler\ circuit}}
+\DoxyCodeLine{00035\ \ \ \ \ std::vector<int>\ circuit;}
+\DoxyCodeLine{00037\ \ \ \ \ std::vector<int>*\ adjlist;}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{float}\ **adjacencyMatrix;\ }
+\DoxyCodeLine{00040\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classGraphAM_abd5fe3f56e198f48d919bd5a29d3692a}{getNumNodes}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{float}\ **\ \mbox{\hyperlink{classGraphAM_abfa5afcac63dd5fa957bfea4166b6a5c}{getAdjacencyMatrix}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classGraphAM_a62e4bfd7d24bd4570713f60b5fa1ad6e}{GraphAM}}(\textcolor{keywordtype}{int}\ numNodes);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGraphAM_aed76210eb39fb923e8853c40b463a35b}{addEdge}}(\textcolor{keywordtype}{int}\ src,\ \textcolor{keywordtype}{int}\ dest,\ \textcolor{keywordtype}{float}\ dist);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGraphAM_a8843605ad5296382aff32bba98d471d4}{tsp}}(std::vector<bool>\&\ v,\ \textcolor{keywordtype}{int}\ currPos,\ \textcolor{keywordtype}{int}\ n,\ \textcolor{keywordtype}{int}\ count,\ \textcolor{keywordtype}{float}\ cost,\ \textcolor{keywordtype}{float}\&\ ans,\ std::vector<int>\&\ path);}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classGraphAM_ab9388bf0447c1db94690b889d7d20eb3}{getWeight}}(\textcolor{keywordtype}{int}\ node1,\ \textcolor{keywordtype}{int}\ node2)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{float}\ getAt(\textcolor{keywordtype}{int}\ x,\textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{int}\ getN()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{int}\ \&getPathLength()\ ;}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ std::vector<int>\ \&getCircuit()\ ;}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{void}\ addToAdjList(\textcolor{keywordtype}{int}\ i,\textcolor{keywordtype}{int}\ j);}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{int}\ getadjSizeAt(\textcolor{keywordtype}{int}\ i);}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{void}\ pushToOdd(\textcolor{keywordtype}{int}\ i);}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<int>\ \&\ getOdds()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classGraphAM}{\string~GraphAM}}();}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \ \ std::vector<int>\ getadjAt(\textcolor{keywordtype}{int}\ i);}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{void}\ setPathValLongInt(\textcolor{keywordtype}{long}\ i,\textcolor{keywordtype}{int}\ j,\textcolor{keywordtype}{float}\ val);}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{int}\ getPathValAt(\textcolor{keywordtype}{int}\ i,\ \textcolor{keywordtype}{int}\ j);}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{comment}{//void\ fillMatrix();}}
+\DoxyCodeLine{00112\ \};}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//DA2\_GRAPHAM\_H}}
+
+\end{DoxyCode}

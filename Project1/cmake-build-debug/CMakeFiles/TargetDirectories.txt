@@ -1,0 +1,3 @@
+/Users/goncalomatias/Documents/GitHub/DA1/cmake-build-debug/CMakeFiles/DA1.dir
+/Users/goncalomatias/Documents/GitHub/DA1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/goncalomatias/Documents/GitHub/DA1/cmake-build-debug/CMakeFiles/rebuild_cache.dir

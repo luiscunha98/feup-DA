@@ -1,0 +1,180 @@
+\doxysection{Graph\+AM Class Reference}
+\hypertarget{classGraphAM}{}\label{classGraphAM}\index{GraphAM@{GraphAM}}
+
+
+Represents a graph using an adjacency matrix representation.  
+
+
+
+
+{\ttfamily \#include $<$Graph\+AM.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classGraphAM_abd5fe3f56e198f48d919bd5a29d3692a}{get\+Num\+Nodes}} () const
+\begin{DoxyCompactList}\small\item\em Get the number of nodes in the graph. \end{DoxyCompactList}\item 
+float \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classGraphAM_abfa5afcac63dd5fa957bfea4166b6a5c}{get\+Adjacency\+Matrix}} () const
+\begin{DoxyCompactList}\small\item\em Get the adjacency matrix of the graph. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classGraphAM_a62e4bfd7d24bd4570713f60b5fa1ad6e}{Graph\+AM}} (int num\+Nodes)
+\begin{DoxyCompactList}\small\item\em Parameterized constructor for \doxylink{classGraphAM}{Graph\+AM}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGraphAM_aed76210eb39fb923e8853c40b463a35b}{add\+Edge}} (int src, int dest, float dist)
+\begin{DoxyCompactList}\small\item\em Add an edge to the graph. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGraphAM_a8843605ad5296382aff32bba98d471d4}{tsp}} (std\+::vector$<$ bool $>$ \&v, int curr\+Pos, int n, int count, float cost, float \&ans, std\+::vector$<$ int $>$ \&path)
+\begin{DoxyCompactList}\small\item\em Solve the Traveling Salesman Problem (TSP) using the held-\/karp algorithm. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classGraphAM_ab9388bf0447c1db94690b889d7d20eb3}{get\+Weight}} (int node1, int node2) const
+\begin{DoxyCompactList}\small\item\em Get the weight/distance between two nodes in the graph. \end{DoxyCompactList}\item 
+\Hypertarget{classGraphAM_a77a41eff30298c3d163710012f7839a2}\label{classGraphAM_a77a41eff30298c3d163710012f7839a2} 
+float {\bfseries get\+At} (int x, int y)
+\item 
+\Hypertarget{classGraphAM_aef7ed421335b81bf8386e09c9ae3b0f8}\label{classGraphAM_aef7ed421335b81bf8386e09c9ae3b0f8} 
+int {\bfseries getN} () const
+\item 
+\Hypertarget{classGraphAM_a51e7d9dada84ea6755cc2638383cf384}\label{classGraphAM_a51e7d9dada84ea6755cc2638383cf384} 
+int \& {\bfseries get\+Path\+Length} ()
+\item 
+\Hypertarget{classGraphAM_a60a92df7107aa53e8a76bbaa7b1fe7cb}\label{classGraphAM_a60a92df7107aa53e8a76bbaa7b1fe7cb} 
+std\+::vector$<$ int $>$ \& {\bfseries get\+Circuit} ()
+\item 
+\Hypertarget{classGraphAM_ac529e1c352f3f9d3cf783d3f06b7d7d9}\label{classGraphAM_ac529e1c352f3f9d3cf783d3f06b7d7d9} 
+void {\bfseries add\+To\+Adj\+List} (int i, int j)
+\item 
+\Hypertarget{classGraphAM_ae7d50ab7a69f61e8c5c7e6fbc5e399a9}\label{classGraphAM_ae7d50ab7a69f61e8c5c7e6fbc5e399a9} 
+int {\bfseries getadj\+Size\+At} (int i)
+\item 
+\Hypertarget{classGraphAM_a2733f58f3bff488d2bc9f4a360156ec6}\label{classGraphAM_a2733f58f3bff488d2bc9f4a360156ec6} 
+void {\bfseries push\+To\+Odd} (int i)
+\item 
+\Hypertarget{classGraphAM_a8bf47bf317babf1361126319f81e3a0e}\label{classGraphAM_a8bf47bf317babf1361126319f81e3a0e} 
+const std\+::vector$<$ int $>$ \& {\bfseries get\+Odds} () const
+\item 
+\Hypertarget{classGraphAM_afca67011c4dfba491a7db2edad525da8}\label{classGraphAM_afca67011c4dfba491a7db2edad525da8} 
+std\+::vector$<$ int $>$ {\bfseries getadj\+At} (int i)
+\item 
+\Hypertarget{classGraphAM_a1c3a69169e8d10d00a6c0b51261e464b}\label{classGraphAM_a1c3a69169e8d10d00a6c0b51261e464b} 
+void {\bfseries set\+Path\+Val\+Long\+Int} (long i, int j, float val)
+\item 
+\Hypertarget{classGraphAM_a9f286a07137e86c886917a22f11da0aa}\label{classGraphAM_a9f286a07137e86c886917a22f11da0aa} 
+int {\bfseries get\+Path\+Val\+At} (int i, int j)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a graph using an adjacency matrix representation. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classGraphAM_a62e4bfd7d24bd4570713f60b5fa1ad6e}\label{classGraphAM_a62e4bfd7d24bd4570713f60b5fa1ad6e} 
+\index{GraphAM@{GraphAM}!GraphAM@{GraphAM}}
+\index{GraphAM@{GraphAM}!GraphAM@{GraphAM}}
+\doxysubsubsection{\texorpdfstring{GraphAM()}{GraphAM()}}
+{\footnotesize\ttfamily Graph\+AM\+::\+Graph\+AM (\begin{DoxyParamCaption}\item[{int}]{num\+Nodes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Parameterized constructor for \doxylink{classGraphAM}{Graph\+AM}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+Nodes} & The number of nodes in the graph. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classGraphAM_aed76210eb39fb923e8853c40b463a35b}\label{classGraphAM_aed76210eb39fb923e8853c40b463a35b} 
+\index{GraphAM@{GraphAM}!addEdge@{addEdge}}
+\index{addEdge@{addEdge}!GraphAM@{GraphAM}}
+\doxysubsubsection{\texorpdfstring{addEdge()}{addEdge()}}
+{\footnotesize\ttfamily void Graph\+AM\+::add\+Edge (\begin{DoxyParamCaption}\item[{int}]{src,  }\item[{int}]{dest,  }\item[{float}]{dist }\end{DoxyParamCaption})}
+
+
+
+Add an edge to the graph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & The source node of the edge. \\
+\hline
+{\em dest} & The destination node of the edge. \\
+\hline
+{\em dist} & The weight/distance of the edge. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classGraphAM_abfa5afcac63dd5fa957bfea4166b6a5c}\label{classGraphAM_abfa5afcac63dd5fa957bfea4166b6a5c} 
+\index{GraphAM@{GraphAM}!getAdjacencyMatrix@{getAdjacencyMatrix}}
+\index{getAdjacencyMatrix@{getAdjacencyMatrix}!GraphAM@{GraphAM}}
+\doxysubsubsection{\texorpdfstring{getAdjacencyMatrix()}{getAdjacencyMatrix()}}
+{\footnotesize\ttfamily float \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} Graph\+AM\+::get\+Adjacency\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the adjacency matrix of the graph. 
+
+\begin{DoxyReturn}{Returns}
+Const reference to the adjacency matrix. 
+\end{DoxyReturn}
+\Hypertarget{classGraphAM_abd5fe3f56e198f48d919bd5a29d3692a}\label{classGraphAM_abd5fe3f56e198f48d919bd5a29d3692a} 
+\index{GraphAM@{GraphAM}!getNumNodes@{getNumNodes}}
+\index{getNumNodes@{getNumNodes}!GraphAM@{GraphAM}}
+\doxysubsubsection{\texorpdfstring{getNumNodes()}{getNumNodes()}}
+{\footnotesize\ttfamily int Graph\+AM\+::get\+Num\+Nodes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the number of nodes in the graph. 
+
+\begin{DoxyReturn}{Returns}
+The number of nodes. 
+\end{DoxyReturn}
+\Hypertarget{classGraphAM_ab9388bf0447c1db94690b889d7d20eb3}\label{classGraphAM_ab9388bf0447c1db94690b889d7d20eb3} 
+\index{GraphAM@{GraphAM}!getWeight@{getWeight}}
+\index{getWeight@{getWeight}!GraphAM@{GraphAM}}
+\doxysubsubsection{\texorpdfstring{getWeight()}{getWeight()}}
+{\footnotesize\ttfamily float Graph\+AM\+::get\+Weight (\begin{DoxyParamCaption}\item[{int}]{node1,  }\item[{int}]{node2 }\end{DoxyParamCaption}) const}
+
+
+
+Get the weight/distance between two nodes in the graph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node1} & The first node. \\
+\hline
+{\em node2} & The second node. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The weight/distance between the two nodes. 
+\end{DoxyReturn}
+\Hypertarget{classGraphAM_a8843605ad5296382aff32bba98d471d4}\label{classGraphAM_a8843605ad5296382aff32bba98d471d4} 
+\index{GraphAM@{GraphAM}!tsp@{tsp}}
+\index{tsp@{tsp}!GraphAM@{GraphAM}}
+\doxysubsubsection{\texorpdfstring{tsp()}{tsp()}}
+{\footnotesize\ttfamily void Graph\+AM\+::tsp (\begin{DoxyParamCaption}\item[{std\+::vector$<$ bool $>$ \&}]{v,  }\item[{int}]{curr\+Pos,  }\item[{int}]{n,  }\item[{int}]{count,  }\item[{float}]{cost,  }\item[{float \&}]{ans,  }\item[{std\+::vector$<$ int $>$ \&}]{path }\end{DoxyParamCaption})}
+
+
+
+Solve the Traveling Salesman Problem (TSP) using the held-\/karp algorithm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & Vector of boolean values indicating visited nodes. \\
+\hline
+{\em curr\+Pos} & The current position in the TSP path. \\
+\hline
+{\em n} & The total number of nodes. \\
+\hline
+{\em count} & The count of visited nodes in the TSP path. \\
+\hline
+{\em cost} & The cost of the TSP path. \\
+\hline
+{\em ans} & Reference to store the minimum TSP path cost. \\
+\hline
+{\em path} & Vector to store the TSP path. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{GraphAM_8h}{Graph\+AM.\+h}}\end{DoxyCompactItemize}

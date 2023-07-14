@@ -1,0 +1,53 @@
+\doxysection{CSVReader Class Reference}
+\hypertarget{classCSVReader}{}\label{classCSVReader}\index{CSVReader@{CSVReader}}
+
+
+Contains static methods for reading data from CSV files.  
+
+
+
+
+{\ttfamily \#include $<$CSVReader.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classCSVReader_a12625f70bff372421197d5d5ce236335}\label{classCSVReader_a12625f70bff372421197d5d5ce236335} 
+{\bfseries CSVReader} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \doxylink{classCSVReader}{CSVReader}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classCSVReader_afc86b6dd8b821ae84ac7505977aec8ad}{read\+\_\+\+TG}} (const std\+::string \&file, \mbox{\hyperlink{classGraphAM}{Graph\+AM}} \&graph)
+\begin{DoxyCompactList}\small\item\em Reads the data from a CSV file and constructs a Traveling Salesman Problem (TSP) graph using an adjacency matrix representation. \end{DoxyCompactList}\item 
+\Hypertarget{classCSVReader_a8fbcb4ccfbb94552cf5cea10d8093195}\label{classCSVReader_a8fbcb4ccfbb94552cf5cea10d8093195} 
+static void {\bfseries read\+\_\+\+RWG} (std\+::string \&file, \mbox{\hyperlink{classGraphAM}{Graph\+AM}} \&graph)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains static methods for reading data from CSV files. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classCSVReader_afc86b6dd8b821ae84ac7505977aec8ad}\label{classCSVReader_afc86b6dd8b821ae84ac7505977aec8ad} 
+\index{CSVReader@{CSVReader}!read\_TG@{read\_TG}}
+\index{read\_TG@{read\_TG}!CSVReader@{CSVReader}}
+\doxysubsubsection{\texorpdfstring{read\_TG()}{read\_TG()}}
+{\footnotesize\ttfamily static void CSVReader\+::read\+\_\+\+TG (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file,  }\item[{\mbox{\hyperlink{classGraphAM}{Graph\+AM}} \&}]{graph }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Reads the data from a CSV file and constructs a Traveling Salesman Problem (TSP) graph using an adjacency matrix representation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The name of the CSV file. \\
+\hline
+{\em graph} & Pointer to the \doxylink{classGraphAM}{Graph\+AM} object where the data will be stored. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{CSVReader_8h}{CSVReader.\+h}}\end{DoxyCompactItemize}
